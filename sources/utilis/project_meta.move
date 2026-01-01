@@ -3,8 +3,9 @@ module happynewyear::project_meta;
 
 
 // ===================== Nft meta ======================//
-const NAME: vector<u8> = b"";
-const FULL_DESCRIPTION: vector<u8> = b""; 
+
+const NAME: vector<u8> = b"Happy New Year 2026";
+const FULL_DESCRIPTION: vector<u8> = b"Celebrating the dawn of 2026! This exclusive digital collectible marks the beginning of a fresh chapter filled with new opportunities. Wishing you prosperity, innovation, and success in the year ahead. Created by Steven Hert.";
 const IMAGE_URL: vector<u8> = b"";
 const THUMBNAIL_URL: vector<u8> = b"";
 const CREATOR: vector<u8> = b"Steven Hert";

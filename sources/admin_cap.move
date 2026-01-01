@@ -7,11 +7,11 @@ public struct AdminCap has key, store {
 
 
 
-public(package) fun create_admin_cap(ctx: &mut TxContext): AdminCap {
+public(package) fun create(ctx: &mut TxContext): AdminCap {
     AdminCap {id: object::new(ctx) }
 }
 
-public fun destroy_admin_cap(_cap: AdminCap) {
+public fun destroy(_cap: AdminCap) {
    let AdminCap { id } = _cap;
     id.delete();
 }

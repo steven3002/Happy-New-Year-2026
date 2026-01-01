@@ -18,7 +18,7 @@ use happynewyear::{
 
 // ==================== create Display  ======================//
 
-public(package) fun create_display(ctx: &mut TxContext, pub: &Publisher): Display<HappyNewYearMessage> {
+public(package) fun create(ctx: &mut TxContext, pub: &Publisher): Display<HappyNewYearMessage> {
    
     let keys = vector[
             b"name".to_string(), 
@@ -58,7 +58,7 @@ public(package) fun create_display(ctx: &mut TxContext, pub: &Publisher): Displa
 
 
 // ===================== modify display ========================//
-public fun add_display(
+public fun add(
     _: &mut AdminCap,
     display_ob: &mut Display<HappyNewYearMessage>, 
     name: String, 
@@ -67,7 +67,7 @@ public fun add_display(
     display::add(display_ob, name, value);
 }
 
-public  fun add_multiple_display(
+public  fun add_multiple(
     _ : &mut AdminCap,
     display_ob: &mut Display<HappyNewYearMessage>,
     names: vector<String>,
@@ -76,7 +76,7 @@ public  fun add_multiple_display(
     display::add_multiple(display_ob, names, values);
 }
 
-public fun  edit_display(
+public fun  edit(
     _: &mut AdminCap,
     display_ob:  &mut Display<HappyNewYearMessage>, 
     name: String, 
@@ -85,7 +85,7 @@ public fun  edit_display(
     display::edit(display_ob, name, value);
 }
 
-public fun remove_display(
+public fun remove(
     _: &mut AdminCap,
     display_ob: &mut Display<HappyNewYearMessage>, 
     name: String
