@@ -1,4 +1,4 @@
-module happynewyear::happynewyear;
+module happynewyear::message;
 
 use std::string::{String, Self};
 use sui::url::{Self, Url};
