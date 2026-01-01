@@ -10,17 +10,10 @@ use sui::{
 
 use happynewyear::{
     admin_cap::AdminCap,
-    message::HappyNewYearMessage
+    message::HappyNewYearMessage,
+    project_meta::Self,
     };
 
-
-// ===================== Nft meta ======================//
-const NAME: vector<u8> = b"";
-const FULL_DESCRIPTION: vector<u8> = b""; 
-const IMAGE_URL: vector<u8> = b"";
-const THUMBNAIL_URL: vector<u8> = b"";
-const CREATOR: vector<u8> = b"Steven Hert";
-const STEVEN_HERT_X: vector<u8> = b"Steven Hert";
 
 
 // ==================== create Display  ======================//
@@ -38,13 +31,13 @@ public(package) fun create_display(ctx: &mut TxContext, pub: &Publisher): Displa
             ];
 
     let values = vector[
-            NAME.to_string(), 
-            FULL_DESCRIPTION.to_string(), 
-            IMAGE_URL.to_string(), 
-            THUMBNAIL_URL.to_string(), 
-            IMAGE_URL.to_string(),
-            STEVEN_HERT_X.to_string(),
-            CREATOR.to_string(),
+            project_meta::name().to_string(), 
+            project_meta::full_description().to_string(), 
+            project_meta::image_url().to_string(), 
+            project_meta::thumbnail_url().to_string(), 
+            project_meta::image_url().to_string(),
+            project_meta::steven_hert_x().to_string(),
+            project_meta::creator().to_string(),
             ];
     
     let mut display = display::new_with_fields<HappyNewYearMessage>(
